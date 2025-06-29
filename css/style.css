@@ -1,6 +1,7 @@
 /********** Template CSS **********/
 :root {
     --primary: #B78D65;
+    
     --light: #F8F8F8;
     --dark: #252525;
 }
@@ -550,4 +551,28 @@ h6,
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+.star {
+    font-size: 1.5em; /* Taille des étoiles */
+    color: gold; /* Couleur des étoiles */
+    
+}
+.bkground {
+    background-color: aqua;
+}
+
+
+/* CSS que j ai rajouter apres personnalisation *****/
+.jutified-text {
+    text-align: justify;
+}
+
+@media (max-width: 991.98px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+  }
 }
