@@ -21,3 +21,21 @@
 
 <!-- Template Javascript -->
 <script src="./js/main.js"></script>
+
+<!-- code js pour la barre de navigationadmin -->
+
+<script>
+    // Récupère le chemin de la page actuelle (ex: "avis-admin.php")
+    const currentPage = window.location.pathname.split('/').pop();
+
+    // Récupère tous les liens dans la liste
+    const links = document.querySelectorAll('#nav-links a');
+
+    // Boucle sur chaque lien pour ajouter la classe active si le href correspond
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+</script>
+

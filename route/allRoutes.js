@@ -10,12 +10,14 @@ export const allRoutes = [
     new Route("/rapport", "Le rapport d'expertise", "./Pages/rapport.html"),
     new Route("/deontologie", "Le code de déontologie", "./Pages/deontologie.html"),
     new Route("/expertise", "L'expertise Immobilière", "./Pages/expertise.html"),
-    new Route("/partenaires", "Les partenaires", "./Pages/partenaires.html"),
-    new Route("/contact", "Contactez-moi", "./Pages/contact.html"),
-    new Route("/actualites", "Actualités", "./Pages/actualites.php"),
+    new Route("/partenaires", "Partenaires experts", "./Pages/partenaires.html"),
+    new Route("/contact", "Contactez DAZ Expertise Immobilière – Estimation en valeur vénale", "./Pages/contact.html"),
+    new Route("/actualites", "Actualités immobilières – Marché & valeur vénale ", "./Pages/actualites.php"),
     new Route("/temoignages", "Témoignage", "./Pages/temoignage.html"),
     new Route("/sommaire-actualites", "sommaire", "./Pages/sommaire-actualites.php"),
-    new Route("/avis-client", "avis-client", "./Pages/avis.php"),
+    new Route("/avis-client", "Avis clients – Estimations en valeur vénale ", "./Pages/avis.php"),
+    new Route("/ajouter-avis", "Avis clients – Ajouter un avis ", "./Pages/ajouterAvisFront.php"),
+    new Route("/ajouterAvis", " Ajouter un Avis clients – Estimations en valeur vénale ", "./Pages/AjouterAvisFront.php"),
     
     
     new Route("/admin", "Dasboard du site", "./back/admin.php"),
