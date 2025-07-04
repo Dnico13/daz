@@ -10,5 +10,5 @@ if ($id) {
   $stmt->execute([$id]);
 }
 
-header("Location: ./admin.php");
+header("Location: ./avis-admin.php");
 exit;

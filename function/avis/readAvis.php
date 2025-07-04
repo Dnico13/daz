@@ -2,7 +2,7 @@
 
 function readAvis1($pdo){
     try{
-        $query= $pdo-> prepare("SELECT * FROM Temoignage where Valid =0");
+        $query= $pdo-> prepare("SELECT * FROM Temoignage where Valid = 1 ORDER BY id DESC");
 
         $query -> execute();
 

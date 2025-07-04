@@ -13,11 +13,11 @@ export const allRoutes = [
     new Route("/partenaires", "Partenaires experts", "./Pages/partenaires.html"),
     new Route("/contact", "Contactez DAZ Expertise Immobilière – Estimation en valeur vénale", "./Pages/contact.html"),
     new Route("/actualites", "Actualités immobilières – Marché & valeur vénale ", "./Pages/actualites.php"),
-    new Route("/temoignages", "Témoignage", "./Pages/temoignage.html"),
+    new Route("/temoignages", "Témoignage", "./Pages/temoignage.html", "./js/star.js"),
     new Route("/sommaire-actualites", "sommaire", "./Pages/sommaire-actualites.php"),
     new Route("/avis-client", "Avis clients – Estimations en valeur vénale ", "./Pages/avis.php"),
-    new Route("/ajouter-avis", "Avis clients – Ajouter un avis ", "./Pages/ajouterAvisFront.php"),
-    new Route("/ajouterAvis", " Ajouter un Avis clients – Estimations en valeur vénale ", "./Pages/AjouterAvisFront.php"),
+    new Route("/ajouter-avis", "Avis clients – Ajouter un avis ", "./Pages/ajouterAvisFront.html", ),
+   
     
     
     new Route("/admin", "Dasboard du site", "./back/admin.php"),
