@@ -57,46 +57,46 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <p class="mb-4">Remplissez le formulaire ci-dessous afin d'être recontacté rapidement.</p>
-                <form>
+                <form method="post" action="./function/contact/sendForm.php" >
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Votre Nom" required>
+                                <input type="text" class="form-control" id="name" placeholder="Votre Nom" name="nom" required>
                                 <label for="name">Votre Nom</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="prenom" placeholder="Votre Prénom" required>
+                                <input type="text" class="form-control" id="prenom" placeholder="Votre Prénom" name="prenom" required>
                                 <label for="prenom">Votre Prénom</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="tel" class="form-control" id="telephone" placeholder="Votre Numero de téléphone" pattern="[0-9]{10}" required>
+                                <input type="tel" class="form-control" id="telephone" placeholder="Votre Numero de téléphone" pattern="[0-9]{10}" name="numero" required>
                                 <label for="telephone">Votre numéro de téléphone</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="Votre Email" required>
+                                <input type="email" class="form-control" id="email" placeholder="Votre Email" name="email" required>
                                 <label for="email">Votre Email</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" placeholder="Objet" required>
+                                <input type="text" class="form-control" id="subject" placeholder="Objet" name="objet" required>
                                 <label for="subject">Objet</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Laissez votre message" id="message" style="height: 100px" required></textarea>
+                                <textarea class="form-control" placeholder="Laissez votre message" id="message" style="height: 100px" name="message" required></textarea>
                                 <label for="message">Message</label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Valider votre Message</button>
+                            <button class="btn btn-primary w-100 py-3" type="submit" name="submit">Valider votre Message</button>
                         </div>
                     </div>
                 </form>

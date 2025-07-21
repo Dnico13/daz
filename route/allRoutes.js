@@ -11,10 +11,10 @@ export const allRoutes = [
     new Route("/deontologie", "Le code de déontologie", "./Pages/deontologie.html"),
     new Route("/definition", "L'expertise Immobilière", "./Pages/definition.html"),
     new Route("/partenaires", "Partenaires experts", "./Pages/partenaires.php"),
-    new Route("/contact", "Contactez DAZ Expertise Immobilière – Estimation en valeur vénale", "./Pages/contact.html"),
+    new Route("/contact", "Contactez DAZ Expertise Immobilière – Estimation en valeur vénale", "./Pages/contact.html", "./js/contact.js"),
     new Route("/actualites", "Actualités immobilières – Marché & valeur vénale ", "./Pages/actualites.php"),
     new Route("/avis-client", "Avis clients – Estimations en valeur vénale ", "./Pages/avis.php"),
-    new Route("/ajouter-avis", "Avis clients – Ajouter un avis ", "./Pages/ajouterAvisFront.html", ),
+    new Route("/ajouter-avis", "Avis clients – Ajouter un avis ", "./Pages/ajouterAvisFront.html","" ),
     new Route("/etudes", "Etude de cas concrets ", "./Pages/etudes.php", ),
     
     

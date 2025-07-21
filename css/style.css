@@ -576,3 +576,11 @@ h6,
     z-index: 1030;
   }
 }
+
+ .img-partenaire {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Ajustez la taille maximale selon vos besoins */
+    margin: 0 auto; /* Centrer l'image */
+    display: block; /* Pour que le margin auto fonctionne */
+}

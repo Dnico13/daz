@@ -1,70 +1,25 @@
 <div class="container">
-<form id="form-avis">
-  <div class="mb-3">
-    <label for="prenom">Prénom</label>
-    <input type="text" name="prenom" class="form-control" id="prenom" required>
-  </div>
-  <div class="mb-3">
-    <label for="ville">Ville</label>
-    <input type="text" name="ville" class="form-control" id="ville" required>
-  </div>
-  <div class="mb-3">
-    <label for="notation">Note (1 à 5)</label>
-    <input type="number" name="notation" min="1" max="5" class="form-control" id="notation" required>
-  </div>
-  <div class="mb-3">
-    <label for="avis">Avis</label>
-    <textarea name="avis" class="form-control" rows="5" id="avis" required></textarea>
-  </div>
+  <form id="form-avis" method="post" action="/function/avis/sendAvis1.php">
+    <div class="mb-3">
+      <label for="prenom">Prénom</label>
+      <input type="text" name="prenom" class="form-control" id="prenom" required>
+    </div>
+    <div class="mb-3">
+      <label for="ville">Ville</label>
+      <input type="text" name="ville" class="form-control" id="ville" required>
+    </div>
+    <div class="mb-3">
+      <label for="notation">Note (1 à 5)</label>
+      <input type="number" name="notation" min="1" max="5" class="form-control" id="notation" required>
+    </div>
+    <div class="mb-3">
+      <label for="avis">Avis</label>
+      <textarea name="avis" class="form-control" rows="5" id="avis" required></textarea>
+    </div>
 
-  <button type="submit" class="btn btn-primary py-3 px-5">Enregistrer</button>
-  <a href="/avis-client" class="btn btn-secondary py-3 px-5">Annuler</a>
-</form>
+    <button type="submit" class="btn btn-primary py-3 px-5">Enregistrer</button>
+    <a href="/avis-client" class="btn btn-secondary py-3 px-5">Annuler</a>
+  </form>
 
-<div id="feedback" class="mt-4"></div>
-<script>
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('form-avis');
-    const feedback = document.getElementById('feedback');
-    
-    if (!form) {
-      console.warn("🛑 Le formulaire #form-avis est introuvable. Vérifie ton HTML et le moment où ton script est chargé.");
-      return;
-    }
-    
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const data = {
-        prenom: form.prenom.value.trim(),
-        ville: form.ville.value.trim(),
-        notation: form.notation.value,
-        avis: form.avis.value.trim()
-      };
-      
-      try {
-        const response = await fetch('/back/function/avis/sendAvis1.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-      
-      const result = await response.json();
-
-      if (result.success) {
-        feedback.innerHTML = `<div class="alert alert-success">Merci pour votre avis !</div>`;
-        form.reset();
-      } else {
-        feedback.innerHTML = `<div class="alert alert-danger">${result.message || "Une erreur est survenue."}</div>`;
-      }
-    } catch (error) {
-      feedback.innerHTML = `<div class="alert alert-danger">Erreur réseau ou serveur.</div>`;
-    }
-  });
-});
-</script>
-
-
+  <div id="feedback" class="mt-4"></div>
+  

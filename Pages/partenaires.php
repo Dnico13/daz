@@ -27,7 +27,7 @@ Partenaires de confiance de DAZ Expertise Immobilière – Réseau d’experts e
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <a class="fact-icon" href="<?=$readPartenaire['lien']?>" target="_blank" rel="noopener">
-                            <img src="./illustrations/partenaires/<?=$readPartenaire['logo']?>" alt="logo<?=$readPartenaire['nom']?>" title="Visitez le site <?=$readPartenaire['nom']?>">
+                            <img src="./illustrations/partenaires/<?=$readPartenaire['logo']?>" alt="logo<?=$readPartenaire['nom']?>" title="Visitez le site <?=$readPartenaire['nom']?>" class="img-partenaire">
                         </a>
                         <h3 class="mb-3"></h3>
                         <p class="mb-0"></p>

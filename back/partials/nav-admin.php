@@ -1,9 +1,12 @@
-<div class="col-md-3 d-flex flex-column">
+<div class="col-md-2 d-flex flex-column">
     <div class="list-group" id="nav-links">
         <a href="admin.php" class="list-group-item list-group-item-action">Accueil</a>
         <!-- <a href="users.php" class="list-group-item list-group-item-action">Gestion des utilisateurs</a>-->
+        <a href="contenu-admin.php" class="list-group-item list-group-item-action">Gestion des Actualités</a>
+        <a href="etudes-admin.php" class="list-group-item list-group-item-action">Gestion des cas concrets </a>
         <a href="avis-admin.php" class="list-group-item list-group-item-action">Gestion des avis clients</a>
-        <a href="contenu-admin.php" class="list-group-item list-group-item-action">Gestion du contenu</a>
+        <a href="partenaires-admin.php" class="list-group-item list-group-item-action">Gestion des Partenaires</a>
+        <a href="messages-admin.php" class="list-group-item list-group-item-action">Gestion des Messages</a>
         <a href="logout.php" class="list-group-item list-group-item-action">Déconnexion</a>
     </div>
 </div>

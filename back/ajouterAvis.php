@@ -1,37 +1,35 @@
 <?php
 session_start();
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header("Location: /");
-    exit;
+  header("Location: /");
+  exit;
 }
 
 
 require_once '../pdo.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $prenom = $_POST['prenom'] ?? '';
-    $ville = $_POST['ville'] ?? '';
-    $notation = (int)($_POST['notation'] ?? 0);
-    $avis = $_POST['avis'] ?? '';
-    $valid = isset($_POST['valid']) ? 1 : 0;
+  $prenom = $_POST['prenom'] ?? '';
+  $ville = $_POST['ville'] ?? '';
+  $notation = (int)($_POST['notation'] ?? 0);
+  $avis = $_POST['avis'] ?? '';
+  $valid = isset($_POST['valid']) ? 1 : 0;
 
-    if ($prenom && $ville && $notation > 0 && $avis) {
-        $stmt = $pdo->prepare("INSERT INTO Temoignage (prenom, ville, notation, avis, Valid) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([$prenom, $ville, $notation, $avis, $valid]);
-        header("Location: avis-admin.php");
-        exit;
-    }
+  if ($prenom && $ville && $notation > 0 && $avis) {
+    $stmt = $pdo->prepare("INSERT INTO Temoignage (prenom, ville, notation, avis, Valid) VALUES (?, ?, ?, ?, ?)");
+    $stmt->execute([$prenom, $ville, $notation, $avis, $valid]);
+    header("Location: avis-admin.php");
+    exit;
+  }
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Ajouter un témoignage</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
+<?php require_once './partials/head.php'; ?>
+
+<?php
+  require_once './partials/header.php';
+  ?>
+  <body class="bg-light">
   <div class="container py-5">
     <h1 class="mb-4">Ajouter un témoignage</h1>
     <form method="post">
@@ -59,5 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <a href="avis-admin.php" class="btn btn-secondary">Annuler</a>
     </form>
   </div>
+  <?php
+  require_once './partials/footer.php';
+  require_once './partials/js.php';
+  ?>
 </body>
+
 </html>

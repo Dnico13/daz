@@ -31,14 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Modifier un témoignage</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+
+   <?php require_once './partials/head.php'; ?>
+
 <body class="bg-light">
+    <?php require_once './partials/header.php'; ?>
   <div class="container py-5">
     <h1 class="mb-4">Modifier le témoignage</h1>
     <form method="post">
@@ -66,5 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <a href="avis-admin.php" class="btn btn-secondary">Annuler</a>
     </form>
   </div>
+   <?php
+    require_once './partials/footer.php';
+    require_once './partials/js.php';
+    ?>
 </body>
 </html>

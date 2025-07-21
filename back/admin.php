@@ -27,7 +27,7 @@ require_once './partials/head.php';
             require_once './partials/nav-admin.php';
             ?>
             
-            <div class="col-md-8 d-flex flex-column">
+            <div class="col-md-10 d-flex flex-column">
                 <h2>Bienvenue, <?php echo $_SESSION['prenom']; ?>!</h2>
                 <p>Utilisez le menu à gauche pour naviguer dans les différentes sections d'administration du site.</p>
             </div>
