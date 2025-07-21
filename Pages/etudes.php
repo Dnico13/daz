@@ -5,7 +5,7 @@ $readEtudes = readEtudes($pdo);
 ?>
 
 <h1 class="visually-hidden">
-    
+    Cas concrets et études de cas de l'expert en expertise immobilière : Success stories et réalisations détaillées
 </h1>
 
 
@@ -20,7 +20,7 @@ $readEtudes = readEtudes($pdo);
 <div class="container-xxl mt-3 mt-sm-5 pt-sm-5">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center align-items-stretch g-4 py-5">
         <?php foreach ($readEtudes as $index => $etude) { ?>
-            <div class="col">
+            <article class="col">
                 <div class="card h-100 d-flex flex-column mx-auto wow fadeInUp" data-wow-delay="0.1s">
                     <img src="./illustrations/etudes/<?= $etude["illustration"]; ?>" class="card-img-top" alt="Illustration de l'article intitulé :<?= $etude["Titre_principal"]; ?>  ">
                     <div class="card-body flex-grow-1 bg-light">
@@ -34,7 +34,7 @@ $readEtudes = readEtudes($pdo);
                         </button>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- MODALE Bootstrap -->
             <div class="modal fade" id="modalArticle<?= $index ?>" tabindex="-1" aria-labelledby="modalLabel<?= $index ?>" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">

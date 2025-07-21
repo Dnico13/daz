@@ -21,7 +21,7 @@ $readActu = readActu($pdo);
 <div class="container-xxl mt-3 mt-sm-5 pt-sm-5">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center align-items-stretch g-4 py-5">
         <?php foreach ($readActu as $index => $actu) { ?>
-            <div class="col">
+            <article class="col">
                 <div class="card h-100 d-flex flex-column mx-auto wow fadeInUp" data-wow-delay="0.1s">
                     <img src="./illustrations/<?= $actu["illustration_principale"]; ?>" class="card-img-top" alt="Illustration de l'article intitulé :<?= $actu["titre_principal"]; ?>  ">
                     <div class="card-body flex-grow-1 bg-light">
@@ -35,13 +35,13 @@ $readActu = readActu($pdo);
                         </button>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- MODALE Bootstrap -->
             <div class="modal fade" id="modalArticle<?= $index ?>" tabindex="-1" aria-labelledby="modalLabel<?= $index ?>" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalLabel<?= $index ?>"><?= $actu["titre_principal"]; ?></h5>
+                            <h2 class="modal-title" id="modalLabel<?= $index ?>"><?= $actu["titre_principal"]; ?></h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                         </div>
                         <div class="modal-body">

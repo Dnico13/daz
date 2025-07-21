@@ -38,9 +38,9 @@ if (isset($_POST['submit'])) {
             $stmt->bindParam(':text', $text);
 
             $stmt->execute(); // Exécution de la requête
-            //----- envoi du mail --------
-            $to = 'Dnico13@hotmail.com ,dz@daz-expertiseimmobiliere.com '; // Remplace par l'adresse réelle du responsable
-            $subject = "📬 Nouveau message reçu via le site";
+            //----- envoi du mail --------dz@daz-expertiseimmobiliere.com
+            $to = 'Dnico13@hotmail.com'; // Remplace par l'adresse réelle du responsable
+            $subject = "📬 Nouveau message reçu via le site de daz-expertise immobiliere V2";
             $messageEmail = "
                             Nom : $nom
                             Prénom : $prenom
@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
                             Message :$text
                     ";
 
-            $headers = "From: \"$prenom $nom\" <contact@monsite.fr>\r\n";
+            $headers = "From: \"$prenom $nom\" <contact@ndev2023.fr>\r\n";
 
             $headers .= "Reply-To: $email\r\n";
             $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
